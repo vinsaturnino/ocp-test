@@ -48,7 +48,7 @@ my_logger.addHandler(handler)
 def check():
     """health route"""
     user = request.args.get('name')
-    state = {"ciao":user }
+    state = {"ciao, amico":user }
     my_logger.info(state)
     #my_logger.info("Function called by " + username)
     return jsonify(state)
