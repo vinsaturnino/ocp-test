@@ -18,6 +18,12 @@ else:
 #############
 
 
+#ENV
+# Get environment variables
+n = os.getenv('from')
+greeting = os.environ.get('greeting')
+######
+
 # #LOGGING
 # LOG_FILENAME = os.path.join(resource_path, 'logging.log')
 # my_logger = logging.getLogger('MyLogger')
@@ -48,7 +54,7 @@ my_logger.addHandler(handler)
 def check():
     """health route"""
     user = request.args.get('name')
-    state = {"ciao, amico":user }
+    state = {greeting +"da " + n:user }
     my_logger.info(state)
     #my_logger.info("Function called by " + username)
     return jsonify(state)
