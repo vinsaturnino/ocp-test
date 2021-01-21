@@ -2,6 +2,4 @@ Flask>=1.0.0
 gunicorn==19.7.1
 prometheus-client
 xlrd
-inflect
-numpy
-pandas
+ibmcloudenv
